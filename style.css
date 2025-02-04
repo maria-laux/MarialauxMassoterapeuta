@@ -1,0 +1,268 @@
+:root {
+    --verde-oliva: #6B8E23;
+    --verde-menta: #A7C957;
+    --bege: #F5E3C6;
+    --marrom: #8B5E3C;
+    --marrom-claro: #A67C52;
+}
+
+body {
+    font-family: sans-serif, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #517707;
+    color: white;
+    text-align: center;
+    line-height: 1.0;
+}
+
+/* Personalização da barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--verde-menta);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--bege);
+    border-radius: 10px;
+    border: 3px solid var(--verde-menta);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--marrom-claro);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--bege) var(--verde-menta);
+}
+
+/* Navbar */
+.navbar {
+    background: var(--verde-oliva);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    background-color: var(--bege);
+    color: var(--verde-oliva);
+}
+
+/* Botões */
+.btn {
+    background: var(--verde-oliva);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--marrom-claro);
+}
+
+/* Seções */
+section {
+    padding: 2rem;
+}
+
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('caminho/para/sua-imagem.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#about {
+    background-color: var(--bege);
+    color: var(--marrom);
+}
+
+#services {
+    background-color: var(--verde-menta);
+    color: var(--marrom);
+}
+
+.service {
+    background: var(--bege);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+    color: var(--verde-oliva);
+}
+
+#contact {
+    background-color: var(--bege);
+    color: var(--verde-oliva);
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--verde-oliva);
+}
+
+form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--verde-oliva);
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form button {
+    background: var(--verde-oliva);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--marrom-claro);
+}
+
+#localizacao {
+    background-color: var(--verde-menta);
+    color: var(--marrom);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 10px;
+}
+
+.endereco {
+    background-color: var(--bege);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.endereco h3 {
+    color: var(--verde-oliva);
+}
+
+.endereco a:hover {
+    color: var(--marrom-claro);
+}
+
+/* Footer */
+footer {
+    background: var(--marrom);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+}
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color:   #517707;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.show {
+        display: flex;
+    }
+
+    .menu li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: #333;
+    }
+}
