@@ -232,6 +232,8 @@ footer {
 .whatsapp-button:hover {
     transform: scale(1.1);
 }
+
+/* Responsividade */
 @media (max-width: 768px) {
     .menu {
         display: none;
@@ -240,7 +242,7 @@ footer {
         position: absolute;
         top: 60px;
         left: 0;
-        background-color:   #517707;
+        background-color: #517707;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
@@ -265,4 +267,42 @@ footer {
         margin: 5px auto;
         background-color: #333;
     }
+
+    .navbar .menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #0d480f;
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar .menu.active {
+        display: block;
+    }
+
+    .navbar .menu li {
+        margin: 15px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+/* Redes sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-icon i {
+    font-size: 30px;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover i {
+    transform: scale(1.1);
 }

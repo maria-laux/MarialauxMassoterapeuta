@@ -128,4 +128,12 @@ document.addEventListener("DOMContentLoaded", function () {
             backToTopButton.style.display = "none";
         }
     });
+
+    // Menu retrátil
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menu = document.querySelector('.navbar .menu');
+
+    mobileMenu.addEventListener('click', () => {
+        menu.classList.toggle('active');  // Alterna a classe 'active' que mostra/oculta o menu
+    });
 });
